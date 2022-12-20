@@ -43,7 +43,7 @@ public class CityWiseEventProcessor implements EventProcessor<UserCityData> {
 	}
 	
 	private synchronized String formatNotificationText(UserCityData userSetting, BigDecimal currentTemp) {
-		return String.format("=================================================================================== \r\n"
+		return String.format("\n=================================================================================== \r\n"
 				+ "Hi %s,\r\n"
 				+ "\r\n"
 				+ "ALERT - Temperature touched %s Degree Celsius in %s.\r\n"
