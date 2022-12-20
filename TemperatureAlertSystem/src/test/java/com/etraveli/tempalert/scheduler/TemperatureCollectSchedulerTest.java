@@ -24,7 +24,6 @@ import com.etraveli.tempalert.datasource.UserCityCache.UserCityData;
 import com.etraveli.tempalert.feign.beans.TemperatureData;
 import com.etraveli.tempalert.feign.client.TemperatureClient;
 import com.etraveli.tempalert.processor.CityWiseEventProcessor;
-import com.etraveli.tempalert.scheduler.TemperatureCollectScheduler;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TemperatureCollectSchedulerTest {

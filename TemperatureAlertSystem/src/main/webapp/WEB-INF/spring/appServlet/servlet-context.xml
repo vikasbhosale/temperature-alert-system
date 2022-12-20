@@ -38,5 +38,7 @@
 	
 	<context:component-scan base-package="com.etraveli.tempalert" />
 	<task:annotation-driven />
+	<resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>
+	<resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
 	
 </beans:beans>

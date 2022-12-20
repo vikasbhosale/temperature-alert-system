@@ -17,7 +17,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 import com.etraveli.tempalert.datasource.UserCityCache.UserCityData;
 import com.etraveli.tempalert.feign.beans.TemperatureData;
 import com.etraveli.tempalert.notifications.NotificationService;
-import com.etraveli.tempalert.processor.CityWiseEventProcessor;
 
 /**
  * @author VBhosale

@@ -1,10 +1,10 @@
 package com.etraveli.tempalert.datasource;
 
 import java.math.BigDecimal;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -66,7 +66,7 @@ public class UserCityCache {
 	 * @return
 	 */
 	public List<LinkedList<UserCityData>> getAll() {
-		return cityCache.entrySet().stream().map(entry -> entry.getValue()).collect(Collectors.toList());
+		return cityCache.entrySet().stream().map(Entry::getValue).collect(Collectors.toList());
 	}
 	
 	/**
