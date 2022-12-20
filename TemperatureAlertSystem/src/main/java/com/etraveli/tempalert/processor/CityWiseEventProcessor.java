@@ -30,19 +30,36 @@ public class CityWiseEventProcessor implements EventProcessor<UserCityData> {
 				BigDecimal reading = temperatureData.getReading();
 				if (setting.getCondition().equalsIgnoreCase(Operator.GT.name()) && 
 						setting.getReading().compareTo(reading) == -1) {
-					notificationService.sendNotification(String.format("User %s - critera: %s %s, Setting : Current Temperature : %s, City: %s", 
-							setting.getFirstName(), setting.getCondition(), setting.getReading(), reading ,setting.getCity()));
+					notificationService.sendNotification(formatNotificationText(setting, reading));
 				} else if (setting.getCondition().equalsIgnoreCase(Operator.LS.name()) &&
 						setting.getReading().compareTo(reading) == 1) {
-					notificationService.sendNotification(String.format("User %s - critera: %s %s, Setting : Current Temperature : %s, City: %s", 
-							setting.getFirstName(), setting.getCondition(), setting.getReading(), reading ,setting.getCity()));
+					notificationService.sendNotification(formatNotificationText(setting, reading));
 				} else if (setting.getCondition().equalsIgnoreCase(Operator.EQ.name()) &&
 						setting.getReading().compareTo(reading) == 0) {
-					notificationService.sendNotification(String.format("User %s - critera: %s %s, Setting : Current Temperature : %s, City: %s", 
-							setting.getFirstName(), setting.getCondition(), setting.getReading(), reading ,setting.getCity()));
+					notificationService.sendNotification(formatNotificationText(setting, reading));
 				}
 			});
 		});
+	}
+	
+	private synchronized String formatNotificationText(UserCityData userSetting, BigDecimal currentTemp) {
+		return String.format("=================================================================================== \r\n"
+				+ "Hi %s,\r\n"
+				+ "\r\n"
+				+ "ALERT - Temperature touched %s Degree Celsius in %s.\r\n"
+				+ "Current Temperature noted - %s \r\n"
+				+ "\r\n"
+				+ "You requested to alert on temperature %s %s\r\n"
+				+ "\r\n"
+				+ "Thanks,\r\n"
+				+ "Temperature Alert System \r\n"
+				+ "=================================================================================== \r\n", 
+				userSetting.getFirstName(),
+				userSetting.getReading(),
+				userSetting.getCity(),
+				currentTemp.setScale(2, BigDecimal.ROUND_UP),
+				Operator.findByValue(userSetting.getCondition().toUpperCase()).getDesciption(),
+				userSetting.getReading());
 	}
 
 }
