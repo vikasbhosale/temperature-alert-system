@@ -18,7 +18,7 @@
 
 # System diagram:
 
-![](RackMultipart20221221-1-td9fk9_html_3f605bd2cc4d5c33.jpg)
+![](https://github.com/vikasbhosale/temperature-alert-system/blob/main/images/Temperature_Alert.jpg)
 
 # Components and external parties:
 
@@ -27,13 +27,13 @@
 - User
   - End user who can set the temperature criteria and based on criteria system generate alerts when temperature meet the criteria.
 
-![](RackMultipart20221221-1-td9fk9_html_c0798dbfefb87c88.jpg)
+![](https://github.com/vikasbhosale/temperature-alert-system/blob/main/images/User.jpg)
 
 - Analyser
 
 As named Analyser, it analyses the users and its temperature settings and build a cache based on different parameters. For now, we just consider city as single parameter to build cache.
 
-![](RackMultipart20221221-1-td9fk9_html_b8d95644b895b543.jpg)
+![](https://github.com/vikasbhosale/temperature-alert-system/blob/main/images/Analyser.jpg)
 
 - Scheduler
 
