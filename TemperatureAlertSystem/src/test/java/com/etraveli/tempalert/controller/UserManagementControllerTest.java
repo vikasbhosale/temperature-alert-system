@@ -97,8 +97,8 @@ public class UserManagementControllerTest {
 						))
 				.build();
 		User createUser = staticDB.createUser(user);
-		
-		User updatedUser = createUser.builder().lastName("B").build();
+		createUser.setLastName("B");
+		User updatedUser = createUser;
 		mockMvc.perform(MockMvcRequestBuilders.post(UserRestURIConstants.UPDATE_USER)
 				.content(gson.toJson(updatedUser))
 		.contentType(MediaType.APPLICATION_JSON)

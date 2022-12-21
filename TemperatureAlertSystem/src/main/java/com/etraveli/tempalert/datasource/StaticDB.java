@@ -3,7 +3,6 @@ package com.etraveli.tempalert.datasource;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -18,7 +17,7 @@ import com.etraveli.tempalert.model.User;
 @Component
 public class StaticDB {
 
-	private Random rn = new Random();
+	private AtomicSequenceGenerator sequenceGenerator = new AtomicSequenceGenerator();
 	
 	private Map<Long, User> userData = new ConcurrentHashMap<>();
 	
@@ -38,7 +37,7 @@ public class StaticDB {
 	 * @return
 	 */
 	public User createUser(User user) {
-		user.setId(rn.nextInt(10));
+		user.setId(sequenceGenerator.getNext());
 		userData.put(user.getId(), user);
 		return user;
 	}
@@ -60,5 +59,10 @@ public class StaticDB {
 		User user = userData.get(id);
 		userData.remove(id);
 		return user;
+	}
+	
+	public boolean isEmailIdExist(String emailId) {
+		List<User> allUser = getAllUser();
+		return allUser.stream().anyMatch(user ->  emailId.equals(user.getEmail()));
 	}
 }
