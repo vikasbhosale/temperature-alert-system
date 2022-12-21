@@ -107,6 +107,7 @@ Or download the zip and extract to eclipse or preferred IDE.
 Download from attachment and start with following command
 
 java -jar wiremock-jre8-standalone-2.35.0.jar --port=8081 --global-response-templating
+![java -jar wiremock-jre8-standalone-2.35.0.jar --port=8081 --global-response-templating](https://github.com/vikasbhosale/temperature-alert-system/blob/main/images/wiremock.jpg)
 
 # Testing steps:
 
