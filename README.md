@@ -205,7 +205,7 @@ curl --location --request POST 'localhost:8080/TemperatureAlertSystem/rest/user/
 
 }'
 
-![](RackMultipart20221221-1-td9fk9_html_3af4a58d77ac27df.png)
+![](https://github.com/vikasbhosale/temperature-alert-system/blob/main/images/postman.jpg)
 
 You can use swagger UI for testing.
 
