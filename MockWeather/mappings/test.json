@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/temperature"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "../__files/getData.json"
+    }
+}

@@ -1,0 +1,17 @@
+[
+	{
+		"city": "Mumbai",
+		"reading": "{{randomDecimal lower=-10.1 upper=55.9}}",
+		"Unit": "celsius"
+	},
+	{
+		"city": "Delhi",
+		"reading": "{{randomDecimal lower=-10.1 upper=55.9}}",
+		"Unit": "celsius"
+	},
+	{
+		"city": "bangalore",
+		"reading": "{{randomDecimal lower=-10.1 upper=55.9}}",
+		"Unit": "celsius"
+	}
+]
