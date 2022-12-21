@@ -270,12 +270,12 @@ Add VM arguments.
 
 **--add-opens=java.base/java.lang=ALL-UNNAMED**
 
-![](RackMultipart20221221-1-td9fk9_html_11ab87b0f8ae880c.png)
+![](https://github.com/vikasbhosale/temperature-alert-system/blob/main/images/eclipse-test.jpg)
 
 # Swagger docs:
 
 [http://localhost:8080/TemperatureAlertSystem/swagger-ui.html](http://localhost:8080/TemperatureAlertSystem/swagger-ui.html)
 
-![](RackMultipart20221221-1-td9fk9_html_9a1e5e886e972193.png)
+![](https://github.com/vikasbhosale/temperature-alert-system/blob/main/images/swagger-ui.jpg)
 
 You can use swagger UI to add users and configuration.
